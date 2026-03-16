@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Admin — AgendaPsi</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <div class="auth-card-header">
+      <div class="logo-icon"><img src="assets/img/logo-senac.webp" alt="SENAC" style="width:200px;height:200px;object-fit:contain;border-radius:6px;" /></div>
+      <h2>Login Admin</h2>
+      <p>Área restrita — Psicóloga / Administrador.</p>
+    </div>
+
+    <div id="alert-box"></div>
+
+    <form id="form-login-admin" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="usuario">Usuário</label>
+        <input type="text" class="form-control" id="usuario" placeholder="admin" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="senha">Senha</label>
+        <input type="password" class="form-control" id="senha" placeholder="••••••••" required />
+        <p class="form-hint">Padrão: usuário <strong>admin</strong> / senha <strong>admin123</strong></p>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block btn-lg">Entrar como Admin</button>
+    </form>
+
+    <a href="index.html" class="btn btn-ghost btn-block" style="margin-top:12px;">← Voltar</a>
+  </div>
+</div>
+
+<script src="js/dados.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/app.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

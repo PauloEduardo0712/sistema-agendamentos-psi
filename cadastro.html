@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro — AgendaPsi</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+<div class="auth-wrapper">
+  <div class="auth-card" style="max-width:520px;">
+    <div class="auth-card-header">
+      <div class="icon">✏️</div>
+      <h2>Criar Cadastro</h2>
+      <p>Preencha os dados abaixo para solicitar acesso ao sistema.</p>
+    </div>
+
+    <div id="alert-box"></div>
+
+    <form id="form-cadastro" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="nome">Nome completo *</label>
+          <input type="text" class="form-control" id="nome" placeholder="Seu nome completo" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="matricula">Matrícula *</label>
+          <input type="text" class="form-control" id="matricula" placeholder="Ex: 2024001" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="cpf">CPF *</label>
+          <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required maxlength="14" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="telefone">Telefone *</label>
+          <input type="text" class="form-control" id="telefone" placeholder="(11) 99999-9999" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="curso">Curso *</label>
+          <input type="text" class="form-control" id="curso" placeholder="Ex: Técnico em Informática" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="turma">Turma *</label>
+          <input type="text" class="form-control" id="turma" placeholder="Ex: T01 / Manhã" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">E-mail *</label>
+        <input type="email" class="form-control" id="email" placeholder="seu@email.com" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-submit">
+        📤 Solicitar Cadastro
+      </button>
+    </form>
+
+    <div class="auth-footer">
+      Já tem cadastro? <a href="login-aluno.html">Fazer login</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/dados.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/app.js"></script>
+<script src="js/cadastro.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitar Agendamento — AgendaPsi</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+<div class="auth-wrapper">
+  <div class="auth-card" style="max-width:500px;">
+    <div class="auth-card-header">
+      <div class="icon">📅</div>
+      <h2>Solicitar Agendamento</h2>
+      <p>Preencha os dados para solicitar sua consulta.</p>
+    </div>
+
+    <div id="alert-box"></div>
+
+    <form id="form-agendamento" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="motivo">Motivo da consulta *</label>
+        <textarea class="form-control" id="motivo" placeholder="Descreva brevemente o motivo..." required></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="dataPreferencial">Data preferencial *</label>
+          <input type="date" class="form-control" id="dataPreferencial" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="horarioPreferencial">Horário preferencial *</label>
+          <input type="time" class="form-control" id="horarioPreferencial" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="turno">Turno disponível *</label>
+        <select class="form-control" id="turno" required>
+          <option value="">Selecione...</option>
+          <option value="Manhã">Manhã</option>
+          <option value="Tarde">Tarde</option>
+          <option value="Qualquer">Qualquer horário</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="observacaoAluno">Observações adicionais</label>
+        <textarea class="form-control" id="observacaoAluno" placeholder="Alguma informação adicional? (opcional)"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-lg">📤 Solicitar Agendamento</button>
+    </form>
+
+    <a href="painel-aluno.html" class="btn btn-ghost btn-block" style="margin-top:10px;">← Voltar ao painel</a>
+  </div>
+</div>
+
+<script src="js/dados.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/app.js"></script>
+<script src="js/aluno.js"></script>
+</body>
+</html>
